@@ -1,0 +1,8 @@
+# ZMK build matrix.
+#
+# This default target is chosen to make sure CI works immediately.
+# Replace board/shield with your real hardware target when ready.
+include:ㅓ
+  - board: nice_nano_v2
+    shield: settings_reset
+    artifact-name: trovatore-settings-reset
