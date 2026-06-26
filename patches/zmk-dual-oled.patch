@@ -1,0 +1,16 @@
+diff --git a/app/src/display/main.c b/app/src/display/main.c
+index a86bfad..6648e3a 100644
+--- a/app/src/display/main.c
++++ b/app/src/display/main.c
+@@ -23,6 +23,11 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
+ #include <zmk/display/status_screen.h>
+ 
+ static const struct device *display = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
++#if DT_NODE_EXISTS(DT_NODELABEL(oled1))
++static const struct device *display_secondary = DEVICE_DT_GET(DT_NODELABEL(oled1));
++#else
++static const struct device *display_secondary;
++#endif
+ 
+ #if DT_HAS_CHOSEN(zmk_display_led)
+ 
