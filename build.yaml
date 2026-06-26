@@ -2,9 +2,9 @@
 #
 # Corne split keyboard on nice!nano v2.
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: corne_left
     artifact-name: trovatore-left
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: corne_right
     artifact-name: trovatore-right
